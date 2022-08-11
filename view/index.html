@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script type="module" src="../controller/script.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');</style>
+    
+</head>
+<body>
+    <div class="heading">
+        <h1>2048</h1>
+        <div class="buttons">
+            <div class="new-game-button">
+                <h2>New Game</h2>
+            </div>
+            <div class="feature-button">
+                <h2>Helper</h2>
+            </div>
+        </div>
+        
+        <div class="info">
+            <div class="score">
+                <h2>Score</h2>
+                <h2>0</h2>
+            </div>
+            <div class="highscore">
+                <h2>Best</h2>
+                <h2>0</h2>
+            </div>
+            <div class="add-points">
+                <h2>0</h2>
+            </div>
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="grid">
+            <div data-cell="0" class="grid-cell"></div>
+            <div data-cell="1" class="grid-cell"></div>
+            <div data-cell="2" class="grid-cell"></div>
+            <div data-cell="3" class="grid-cell"></div>
+            <div data-cell="4" class="grid-cell"></div>
+            <div data-cell="5" class="grid-cell"></div>
+            <div data-cell="6" class="grid-cell"></div>
+            <div data-cell="7" class="grid-cell"></div>
+            <div data-cell="8" class="grid-cell"></div>
+            <div data-cell="9" class="grid-cell"></div>
+            <div data-cell="10" class="grid-cell"></div>
+            <div data-cell="11" class="grid-cell"></div>
+            <div data-cell="12" class="grid-cell"></div>
+            <div data-cell="13" class="grid-cell"></div>
+            <div data-cell="14" class="grid-cell"></div>
+            <div data-cell="15" class="grid-cell"></div>
+        </div>
+        <div class="won-screen">
+            <h1>You Won!</h1>
+            <div class="new-game-button">
+                <h2 >Try again</h2>
+            </div>
+        </div>
+        <div class="lost-screen">
+            <h1>Game Over!</h1>
+            <div class="new-game-button">
+                <h2 >Try again</h2>
+            </div>
+        </div>
+        <div class="helper-container">
+            <h1>↑</h1>
+            <h3>Survival Rate 0%</h3>
+            <h1>↓</h1>
+            <h3>Survival Rate 0%</h3>
+            <h1>←</h1>
+            <h3>Survival Rate 0%</h3>
+            <h1>→</h1>
+            <h3>Survival Rate 0%</h3>
+        </div>
+    </div>
+    
+</body>
+</html>

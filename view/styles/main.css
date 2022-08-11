@@ -1,0 +1,338 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0;}
+
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+body {
+    width: 85.188em;
+    height: 63.438em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    flex-flow: wrap;
+    background-color: rgb(250, 247, 237);
+
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5em;
+    color: rgb(117, 110, 102);
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.heading {
+    width: 52.5em;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.buttons h2 {
+    width: 7em;
+    height: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin: .7em;
+    background-color: rgb(140, 123, 104);
+    border-radius: .2em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    align-self: center;
+}
+
+.score, .highscore {
+    width: 9em;
+    height: 4em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin: 1em;
+    background-color: rgb(185, 173, 161);
+    border-radius: .2em;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.score :first-child, .highscore :first-child {
+    font-size: 1em;
+    color: rgb(236,228, 219);
+}
+
+.add-points {
+    position: absolute;
+    font-size: 1em;
+    color: rgba(115, 109, 101, 75%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    margin-top: 2.5em;
+    margin-left: 4em;
+    transition: transform 10s linear;
+    z-index: 2;
+}
+
+.game-container {
+    width: 52.5em;
+    height: 52.5em;
+    background-color: rgb(185, 173, 161);
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 4em; */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 10em 10em 10em 10em; /* auto auto auto */
+    grid-template-rows: 10em 10em 10em 10em; 
+    column-gap: 2.5em;
+    row-gap: 2.5em;
+    overflow: hidden;
+    background-color: rgb(189, 176, 157);
+    border-radius: .5em;
+}
+
+.lost-screen {
+    position: absolute;
+    width: 52.5em;
+    height: 52.5em;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(189, 176, 157, 50%);
+    border-radius: .5em;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    z-index: -1;
+    transition: all 1s;
+    transform: translateZ(100%);
+}
+.lost-screen h1 {
+    display: flex;
+}
+
+.lost-screen .new-game-button h2 {
+    width: 7em;
+    height: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(140, 123, 104);
+    border-radius: .2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.won-screen {
+    position: absolute;
+    width: 52.5em;
+    height: 52.5em;
+    display: flex;
+    overflow: hidden;
+    background-color: rgba(189, 176, 157, 50%);
+    border-radius: .5em;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    z-index: -1;
+    transition: all 1s;
+    transform: translateZ(100%);
+}
+.won-screen h1 {
+    display: flex;
+}
+
+.won-screen .new-game-button h2 {
+    width: 7em;
+    height: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(140, 123, 104);
+    border-radius: .2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grid-cell {
+    background-color: rgb(202, 193, 181);
+    border-radius: .4em;
+}
+
+.helper-container {
+    position: absolute;
+    margin-left: 70em;;
+    width: 13.125em;
+    height: 52.5em;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(189, 176, 157, 50%);
+    border-radius: .5em;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(115, 109, 101);
+}
+
+.helper-container h3 {
+    font-size: 2em;
+    text-align: center;
+}
+.tile-2 {
+    background-color: rgb(228,	221, 212);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(115, 109, 101);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile-4 {
+    background-color: rgb(230, 218, 199);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(115, 109, 101);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: transform .1s linear; */
+}
+
+.tile-8 {
+    background-color: rgb(240, 174, 120);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-16 {
+    background-color: rgb(235, 144, 95);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-32 {
+    background-color: rgb(226, 130, 105);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-64 {
+    background-color: rgb(221, 103, 74);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-128 {
+    background-color: rgb(229, 207, 130);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-256 {
+    background-color: rgb(232, 203, 118);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-512 {
+    background-color: rgb(230, 199, 107);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-1024 {
+    background-color: rgb(226, 195, 105);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
+
+.tile-2048 {
+    background-color: rgb(227, 190, 98);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    color: rgb(255, 255, 255);
+    border-radius: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .1s linear;
+}
