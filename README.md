@@ -28,7 +28,7 @@ Don't let the grid fill up or else you will run out of moves.
 Once you merge a block to the value of 2048, you win!
 Select "New Game" to try again.
 ## Link to Game
-https://van.digital
+https://brendonvan.github.io/Project-1-2048/
 
 ## Technologies Used
 
