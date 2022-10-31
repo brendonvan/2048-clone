@@ -7,6 +7,9 @@
 
 Quick tutorial on how to play: https://levelskip.com/puzzle/How-to-play-2048
 
+## Link to Game
+https://brendonvan.github.io/2048-clone/
+
 ## Getting Started with Gameplay
 ![2048 - Intro](https://github.com/brendonvan/Project-1-Browser-Game/blob/main/images/2048-intro.jpg?raw=true)
 
@@ -27,8 +30,6 @@ Don't let the grid fill up or else you will run out of moves.
 
 Once you merge a block to the value of 2048, you win!
 Select "New Game" to try again.
-## Link to Game
-https://brendonvan.github.io/Project-1-2048/
 
 ## Technologies Used
 
